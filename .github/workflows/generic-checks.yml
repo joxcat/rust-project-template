@@ -1,4 +1,4 @@
-name: clippy, build then test
+name: generic-checks
 
 on: [push, pull_request]
   #push:
