@@ -1,10 +1,4 @@
-<!--
-Using coveralls.io for coverage: https://coveralls.io/
-
--->
-
 # {rust-project-template}
-![Coveralls github](https://img.shields.io/coveralls/github/{Project.repo_user}/{Project.repo_name}/{Project.repo_branch}?style=flat-square)
 ![GitHub workflow Status](https://img.shields.io/github/workflow/status/{Project.repo_user}/{Project.repo_name}/{Project.repo_branch}?style=flat-square)
 ![License GitHub](https://img.shields.io/github/license/{Project.repo_user}/{Project.repo_name}?style=flat-square)
 ![GitHub release (lasted SemVer)](https://img.shields.io/github/release/{Project.repo_user}/{Project.repo_name}?sort=semver&style=flat-square)
