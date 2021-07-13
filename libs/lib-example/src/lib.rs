@@ -68,7 +68,7 @@
 )]
 // END - Embark standard lints v0.4
 // https://rust-unofficial.github.io/patterns/anti_patterns/deny-warnings.html
-#[warn(
+#![warn(
   missing-debug-implementations,
   missing-docs,
   rivial-casts,
