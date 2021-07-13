@@ -69,14 +69,16 @@
 // END - Embark standard lints v0.4
 // https://rust-unofficial.github.io/patterns/anti_patterns/deny-warnings.html
 #![warn(
-  missing-debug-implementations,
-  missing-docs,
-  rivial-casts,
-  trivial-numeric-casts,
-  unused-extern-crates,
-  unused-import-braces,
-  unused-qualifications,
-  unused-results
+  missing_debug_implementations,
+  missing_docs,
+  trivial_casts,
+  trivial_numeric_casts,
+  unused_extern_crates,
+  unused_import_braces,
+  unused_qualifications,
+  unused_results
 )]
 // crate-specific exceptions:
 #![allow()]
+
+//! I'm a library <3
