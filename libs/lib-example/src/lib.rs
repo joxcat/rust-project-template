@@ -1,32 +1,82 @@
-#![forbid(unsafe_code)]
-#![deny(
-  clippy::complexity,
-  clippy::perf,
+// BEGIN - Embark standard lints v0.4
+// do not change or add/remove here, but one can add exceptions after this section
+// for more info see: <https://github.com/EmbarkStudios/rust-ecosystem/issues/59>
+#![deny(unsafe_code)]
+#![warn(
+  clippy::all,
+  clippy::await_holding_lock,
+  clippy::char_lit_as_u8,
   clippy::checked_conversions,
-  clippy::filter_map_next
-)]
-#![warn(
-  clippy::style,
-  clippy::map_unwrap_or,
-  clippy::missing_const_for_fn,
-  clippy::use_self,
-  future_incompatible,
-  rust_2018_idioms,
-  nonstandard_style
-)]
-// with configurable values
-#![warn(
-  clippy::blacklisted_name,
-  clippy::cognitive_complexity,
-  clippy::disallowed_method,
+  clippy::dbg_macro,
+  clippy::debug_assert_with_mut_call,
+  clippy::doc_markdown,
+  clippy::empty_enum,
+  clippy::enum_glob_use,
+  clippy::exit,
+  clippy::expl_impl_clone_on_copy,
+  clippy::explicit_deref_methods,
+  clippy::explicit_into_iter_loop,
+  clippy::fallible_impl_from,
+  clippy::filter_map_next,
+  clippy::float_cmp_const,
   clippy::fn_params_excessive_bools,
-  clippy::struct_excessive_bools,
-  clippy::too_many_lines,
-  clippy::type_complexity,
-  clippy::trivially_copy_pass_by_ref,
-  clippy::type_repetition_in_bounds,
-  clippy::unreadable_literal
+  clippy::if_let_mutex,
+  clippy::implicit_clone,
+  clippy::imprecise_flops,
+  clippy::inefficient_to_string,
+  clippy::invalid_upcast_comparisons,
+  clippy::large_types_passed_by_value,
+  clippy::let_unit_value,
+  clippy::linkedlist,
+  clippy::lossy_float_literal,
+  clippy::macro_use_imports,
+  clippy::manual_ok_or,
+  clippy::map_err_ignore,
+  clippy::map_flatten,
+  clippy::map_unwrap_or,
+  clippy::match_on_vec_items,
+  clippy::match_same_arms,
+  clippy::match_wildcard_for_single_variants,
+  clippy::mem_forget,
+  clippy::mismatched_target_os,
+  clippy::mut_mut,
+  clippy::mutex_integer,
+  clippy::needless_borrow,
+  clippy::needless_continue,
+  clippy::option_option,
+  clippy::path_buf_push_overwrite,
+  clippy::ptr_as_ptr,
+  clippy::ref_option_ref,
+  clippy::rest_pat_in_fully_bound_structs,
+  clippy::same_functions_in_if_condition,
+  clippy::semicolon_if_nothing_returned,
+  clippy::string_add_assign,
+  clippy::string_add,
+  clippy::string_lit_as_bytes,
+  clippy::string_to_string,
+  clippy::todo,
+  clippy::trait_duplication_in_bounds,
+  clippy::unimplemented,
+  clippy::unnested_or_patterns,
+  clippy::unused_self,
+  clippy::useless_transmute,
+  clippy::verbose_file_reads,
+  clippy::zero_sized_map_values,
+  future_incompatible,
+  nonstandard_style,
+  rust_2018_idioms
 )]
-#![deny(clippy::wildcard_imports)]
+// END - Embark standard lints v0.4
+// https://rust-unofficial.github.io/patterns/anti_patterns/deny-warnings.html
+#[warn(
+  missing-debug-implementations,
+  missing-docs,
+  rivial-casts,
+  trivial-numeric-casts,
+  unused-extern-crates,
+  unused-import-braces,
+  unused-qualifications,
+  unused-results
+)]
 // crate-specific exceptions:
 #![allow()]
