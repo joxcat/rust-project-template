@@ -1,4 +1,19 @@
 [workspace]
 members = [
-    "libs/*", # look má, wildcards!
+    "xtask", 
+    "lib/*",
+    # "examples/*",
 ]
+default-members = ["lib/*"]
+
+[workspace.package]
+authors = ["changeme <changeme@example.org>s"]
+version = "0.0.0-changeme"
+edition = "2021"
+license = "MPL-2.0"
+license-file = "LICENSE"
+
+[profile.release]
+lto = 'fat'
+opt-level = 's'
+debug-assertions = false

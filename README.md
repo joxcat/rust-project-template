@@ -1,11 +1,10 @@
-# {rust-project-template}
-![GitHub workflow Status](https://img.shields.io/github/workflow/status/{Project.repo_user}/{Project.repo_name}/{Project.repo_branch}?style=flat-square)
-![License GitHub](https://img.shields.io/github/license/{Project.repo_user}/{Project.repo_name}?style=flat-square)
-![GitHub release (lasted SemVer)](https://img.shields.io/github/release/{Project.repo_user}/{Project.repo_name}?sort=semver&style=flat-square)
-[![Slack chat](https://img.shields.io/badge/chat-on%20slack-brightgreen?style=flat-square)](https://{Project.slack_url})
-[![Doc](https://img.shields.io/badge/documentation-rustdoc-purple?style=flat-square)](https://{Project.repo_user}.github.io/{Project.repo_name})
+# changeme_with_project_name
+![GitHub workflow Status](https://img.shields.io/github/workflow/status/changeme_repo_user/changeme_repo_name/changeme_repo_branch?style=flat-square)
+![License GitHub](https://img.shields.io/github/license/changeme_repo_user/changeme_repo_name?style=flat-square)
+![GitHub release (lasted SemVer)](https://img.shields.io/github/release/changeme_repo_user/changeme_repo_name?sort=semver&style=flat-square)
+[![Doc](https://img.shields.io/badge/documentation-rustdoc-purple?style=flat-square)](https://changeme_repo_user.github.io/changeme_repo_name)
 
-{Project.description}
+changeme_project_description
 
 <!--
 | OS      | Build Status |
@@ -15,9 +14,9 @@
 | OSX     |              |
 -->
 
-## Exemple
+## Example
 ```rust
-// {Insert small example here}
+// changeme_with_a_small_example
 ```
 
 For fuller examples, take a look at [`examples/some_example.rs`](examples/some_example.rs).
@@ -28,22 +27,22 @@ Add the following to your Cargo.toml file:
 ```toml
 [dependencies]
 # If not published on crates.io
-{Project.name} = { git = "{Project.repo_url}" }
+changeme_project_name = { git = "changeme_repo_name" }
 # Else
-# {Project.name} = "SemVer"
+# changeme_project_name = "SemVer"
 ```
 
 ### Features
 Features can be enabled or disabled by configuring the library through Cargo.toml:
 
 ```toml
-[dependencies.{Project.name}]
+[dependencies.changeme_project_name]
 default-features = false
 features = ["pick", "your", "feature", "names", "here"]
 
 ```
 
-The default features are: {Features list}.
+The default features are: changeme_default_features.
 
 The following is a full list of features:
 - **feature:** description
@@ -58,16 +57,16 @@ The following is a full list of features:
 {Insert common errors and response to questions}
 
 ## License
-Licensed under [Unlicense](LICENSE)
+Licensed under [Mozilla Public License 2.0](LICENSE)
 
 ## Contributing
 Please read the [Contributing Guide](.github/CONTRIBUTING.md).
 
 ### Contributors
-- {Someone.name} - <Someone.github>
+- changeme_someone_name - <changeme_someone_github>
 
 ## Related Projects
-- {Some related project}
+- changeme_some_related_project
 
 ## Alternatives
-{Insert alternatives if it exist somes}
+changeme_alternative_project
