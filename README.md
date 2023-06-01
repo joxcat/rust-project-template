@@ -1,5 +1,5 @@
 # changeme_with_project_name
-![GitHub workflow Status](https://img.shields.io/github/workflow/status/changeme_repo_user/changeme_repo_name/changeme_repo_branch?style=flat-square)
+![GitHub workflow Status](https://img.shields.io/github/actions/workflow/status/changeme_repo_user/changeme_repo_name/generic-checks.yml?style=flat-square&branch=main)
 ![License GitHub](https://img.shields.io/github/license/changeme_repo_user/changeme_repo_name?style=flat-square)
 ![GitHub release (lasted SemVer)](https://img.shields.io/github/release/changeme_repo_user/changeme_repo_name?sort=semver&style=flat-square)
 [![Doc](https://img.shields.io/badge/documentation-rustdoc-purple?style=flat-square)](https://changeme_repo_user.github.io/changeme_repo_name)
