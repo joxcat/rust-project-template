@@ -8,16 +8,12 @@ on: [push, pull_request]
       #
 
 jobs:
-  clippy_check:
+  rust_check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: cargo xtask setup
-      - name: clippy
-        uses: actions-rs/clippy-check@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: build
-        run: cargo build --verbose
-      - name: test
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup
+        run: cargo xtask setup
+      - name: Test
         run: cargo xtask ci
