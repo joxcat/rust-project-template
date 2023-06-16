@@ -6,32 +6,32 @@ xtask = "run -p xtask --"
 
 [target.'cfg(all(target_os = "linux", feature = "mold", debug_assertions))']
 rustflags = [
-    "-C linker=clang",
-    "-C link-arg=-fuse-ld=/usr/local/bin/mold"
+    "-Clinker=clang",
+    "-Clink-arg=-fuse-ld=/usr/local/bin/mold"
 ]
 
 [target.'cfg(all(target_os = "linux", feature = "mold", not(debug_assertions)))']
 rustflags = [
-    "-C linker=clang",
-    "-C link-arg=-fuse-ld=/usr/local/bin/mold",
-    "-C link-arg=-Wl,--compress-debug-sections=zlib",
-    "-C force-frame-pointers=yes",
-    "-C target-feature=+crt-static",
-    "-C link-self-contained=yes"
+    "-Clinker=clang",
+    "-Clink-arg=-fuse-ld=/usr/local/bin/mold",
+    "-Clink-arg=-Wl,--compress-debug-sections=zlib",
+    "-Cforce-frame-pointers=yes",
+    "-Ctarget-feature=+crt-static",
+    "-Clink-self-contained=yes"
 ]
 
 # NOTE: you must manually install https://github.com/michaeleisel/zld on mac. you can easily do this with the "brew" package manager:
 # `brew install michaeleisel/zld/zld`
 [target.'cfg(all(target_os = "macos", feature = "zld", debug_assertions))']
 rustflags = [
-    "-C link-arg=-fuse-ld=/usr/local/bin/zld"
+    "-Clink-arg=-fuse-ld=/usr/local/bin/zld"
 ]
 
 [target.'cfg(all(target_os = "macos", feature = "zld", not(debug_assertions)))']
 rustflags = [
-    "-C link-arg=-fuse-ld=/usr/local/bin/zld",
-    "-C link-arg=-Wl,--compress-debug-sections=zlib",
-    "-C force-frame-pointers=yes"
+    "-Clink-arg=-fuse-ld=/usr/local/bin/zld",
+    "-Clink-arg=-Wl,--compress-debug-sections=zlib",
+    "-Cforce-frame-pointers=yes"
 ]
 
 # https://github.com/EmbarkStudios/rust-ecosystem/blob/542740e462f7ebf246e0b7170b3fb77cf6c68ec7/lints.toml

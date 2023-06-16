@@ -41,12 +41,13 @@ fn main() -> Result<()> {
 
     match Command::parse() {
         Command::Setup => {
-            let install_if_not_found = |name, features: Option<&str>| {
+            let install_if_not_found = |name, features: Option<&str>, version: Option<&str>| {
                 cmd!(
                     "sh",
                     "-c",
                     format!(
-                        "if ! command -v {name} >/dev/null; then {cargo} install {name} {}; fi",
+                        "if ! command -v {name} >/dev/null; then {cargo} install {name}{} {}; fi",
+                        version.map_or_else(|| "".to_string(), |version| format!("@{version}")),
                         features.map_or_else(
                             || "".to_string(),
                             |features| format!("--features={features}")
@@ -54,16 +55,16 @@ fn main() -> Result<()> {
                     )
                 )
             };
-            install_if_not_found("cargo-nextest", None).run()?;
-            install_if_not_found("cargo-audit", Some("fix")).run()?;
-            install_if_not_found("cargo-about", None).run()?;
-            install_if_not_found("cargo-deny", None).run()?;
+            install_if_not_found("cargo-nextest", None, None).run()?;
+            install_if_not_found("cargo-audit", Some("fix"), None).run()?;
+            install_if_not_found("cargo-about", None, None).run()?;
+            install_if_not_found("cargo-deny", None, None).run()?;
         }
         Command::License => {
             cmd!(
                 "sh",
                 "-c",
-                format!("{cargo} about generate --config {workspace_root}/.cargo/about.toml --workspace {workspace_root}/.cargo/about.hbs -o COMPILED_LICENSES")
+                format!("{cargo} about generate --config {workspace_root}/.cargo/about.toml --workspace {workspace_root}/.cargo/about.hbs -o {workspace_root}/COMPILED_LICENSES")
             )
             .run()?;
             cmd!(

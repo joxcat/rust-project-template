@@ -2,9 +2,11 @@
 members = [
     "xtask", 
     "lib/*",
+    "bin/*",
     # "examples/*",
 ]
-default-members = ["lib/*"]
+default-members = ["lib/*", "bin/*"]
+resolver = "2"
 
 [workspace.package]
 authors = ["changeme <changeme@example.org>s"]
